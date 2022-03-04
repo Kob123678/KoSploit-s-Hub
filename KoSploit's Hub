@@ -1,0 +1,168 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("KoSploit's Hub", "Sentinel")
+
+-- MAIN MENU
+
+local Tab = Window:NewTab("MAIN MENU")
+
+-- Toggle UI
+
+local Toggle = Tab:NewSection("Toggle UI")
+
+Toggle:NewKeybind("Toggle UI", "Click to change keybinds", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+
+-- Dex explorer
+
+local Dex = Tab:NewSection("Dex explorer (Click to execute)")
+
+Dex:NewButton("Dex explorer v2", "Click to execute", function()
+    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex Explorer V2.txt"))()
+end)
+
+Dex:NewButton("Dex explorer v4", "Click to execute", function()
+    loadstring(game:GetObjects("rbxassetid://418957341")[1].Source)()
+end)
+
+-- Anti Afk
+
+local Afk = Tab:NewSection("Anti Afk (Click to execute)")
+
+Afk:NewButton("Anti-Afk", "Click to execute", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/YaPHdZJ2"))()
+end)
+
+-- BEST Admin Scripts
+
+local Admin = Tab:NewSection("BEST Admin Scripts (Click to execute)")
+
+Admin:NewButton("ShatterVast Admin", "Click to execute", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/iL4NRDux"))()
+end)
+
+Admin:NewButton("Infinite Yield", "Click to execute", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+
+Admin:NewButton("CMD - X", "Click to execute", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))()
+end)
+
+Admin:NewButton("Fates Admin", "Click to execute", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
+end)
+
+Admin:NewButton("Reviz Admin", "Click to execute", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Caniwq2N"))()
+end)
+
+-- Hotel Elephant
+
+local Tab = Window:NewTab("Hotel Elephant")
+local Hotel = Tab:NewSection("Ulimate money (Click to execute)")
+
+
+Hotel:NewButton("Get Ulimate money", "Click to execute", function()
+    game.ReplicatedStorage.MoneyRequest:FireServer(false, 2e9, "Cash")
+end)
+
+-- Funky Friday
+
+local Tab = Window:NewTab("Funky Friday")
+local AutoPlay = Tab:NewSection("Auto play (Click to execute)")
+
+
+AutoPlay:NewButton("Auto play", "Click to execute", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/main.lua",true))()
+end)
+
+-- Blox Fruit
+
+local Tab = Window:NewTab("Blox Fruit")
+local BloxFruit = Tab:NewSection("Blox Fruit Gui (click to execute)")
+BloxFruit:NewButton("Rasputin Hub", "Click to execute", function()
+    loadstring(game:HttpGet("https://rasputin-bf.glitch.me/bloxfruits.lua"))()
+end)
+BloxFruit:NewButton("Island Hub", "Click to execute", function()
+     loadstring(game:HttpGet(('https://raw.githubusercontent.com/vinhuchi/Island_Game/main/Beta-Testing.lua'),true))()
+end)
+BloxFruit:NewButton("JRL Hub", "Click to execute", function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/JRL-lav/Main/main/V2"))()
+end)
+BloxFruit:NewButton("Mokuro Hub", "Click to execute", function()
+       loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+end)
+BloxFruit:NewButton("Mose Hub", "Click to execute", function()
+      loadstring(game:HttpGet(('https://kyouko.se/09iiqyn6479k.txt'),true))()
+end)
+BloxFruit:NewButton("NOOB Hub", "Click to execute", function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/noobhub1/bloxfruit/main/script'))()
+end)
+BloxFruit:NewButton("SAZA Hub", "Click to execute", function()
+      loadstring(game:HttpGet('https://pastebin.com/raw/2RB8izS4'))()
+end)
+
+-- Epic mninigame
+
+local Tab = Window:NewTab("Epic minigames")
+local EpicMinigames = Tab:NewSection("Epic Minigames Gui (click to execute)")
+
+
+EpicMinigames:NewButton("MAIN SCRIPT / GUI", "Click to execute", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Epic%20Minigames/EpicMinigamesGUI"))()
+end)
+
+EpicMinigames:NewButton("SCRIPT GUI #2", "Click to execute", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/YePwz5u5", true))()
+end)
+
+-- Sharkbite
+
+local Tab = Window:NewTab("Sharkbite")
+local Sharkbite = Tab:NewSection("Sharkbite Gui (click to execute)")
+
+
+Sharkbite:NewButton("Black Cypher Script", "Click to execute", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LOOF-sys/Roblox-Shit/main/SharkBite.lua"))()
+end)
+
+Sharkbite:NewButton("The One In The Top-Right Corner", "Click to execute", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/YYVLbzVg", true))()
+end)
+
+Sharkbite:NewButton("Pepsi Byte", "Click to execute", function()
+    loadstring(rawget(game:GetObjects("rbxassetid://3623753581"), 1).Source)("Pepsi Byte")
+end)
+
+-- Kohls Admin House
+
+local Tab = Window:NewTab("Kohls Admin House")
+local Khols = Tab:NewSection("Kohls Admin House Gui (click to execute)")
+
+
+Khols:NewButton("Admin Joy v2", "Click to execute", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/Kob123678/8b4bd26207025839e87ea928d451b5ea/raw/d7fe91cf4091580aefbf87884d133ed833245abc/Admin%2520Joy%2520v2"))()
+end)
+
+Khols:NewButton("NoobSploit v2", "Click to execute", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kob123678/NoobSploit-v2/main/NoobSploit%20v2", true))()
+end)
+
+Khols:NewButton("Shortcut V2!", "Click to execute", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kob123678/Shortcut-V2-/main/Shortcut%20v2", true))()
+end)
+
+Khols:NewButton("Shortcut", "Click to execute", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kob123678/Shortcut/main/Shortcut", true))()
+end)
+
+-- King legacy
+
+local Tab = Window:NewTab("King legacy")
+local King = Tab:NewSection("King legacy Gui (click to execute)")
+
+
+King:NewButton("Strike hub v.2", "Click to execute", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Strikehubv2z/StormSKz/main/All_in_one"))()
+end)
