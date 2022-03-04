@@ -13,6 +13,14 @@ Toggle:NewKeybind("Toggle UI", "Click to change keybinds", Enum.KeyCode.F, funct
 	Library:ToggleUI()
 end)
 
+-- Rejoin server
+
+local rejoin = Tab:NewSection("Rejoin server (Click to rejoin)")
+
+rejoin:NewButton("rejoin", "Click to rejoin", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/6wdd37J7"))()
+end)
+
 -- Dex explorer
 
 local Dex = Tab:NewSection("Dex explorer (Click to execute)")
