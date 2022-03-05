@@ -171,10 +171,18 @@ local Tab = Window:NewTab("King legacy")
 local King = Tab:NewSection("King legacy Gui (click to execute)")
 
 
-King:NewButton("Strike hub v.2", "Click to execute", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Strikehubv2z/StormSKz/main/All_in_one"))()
+King:NewButton("Makuro Hub", "Click to execute", function()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
 end)
 
-King:NewButton("MAKURO Hub", "Click to execute", function()
-    loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+King:NewButton("Black Script", "Click to execute", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/sannin9000/scripts/main/kinglegacy.lua"))()
+end)
+
+King:NewButton("River Hub", "Click to execute", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/7DDhAXjb"))()
+end)
+
+King:NewButton("Scarface", "Click to execute", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PainfulDestroyer/Roblox/main/King%20Legacy"))()
 end)
