@@ -174,3 +174,7 @@ local King = Tab:NewSection("King legacy Gui (click to execute)")
 King:NewButton("Strike hub v.2", "Click to execute", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Strikehubv2z/StormSKz/main/All_in_one"))()
 end)
+
+King:NewButton("MAKURO Hub", "Click to execute", function()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+end)
