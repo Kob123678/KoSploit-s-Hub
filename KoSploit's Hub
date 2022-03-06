@@ -68,7 +68,13 @@ end)
 -- Credit
 
 local Tab = Window:NewTab("Credit")
-local Credit = Tab:NewSection("Made by arty")
+local Credit = Tab:NewSection("Credits!!")
+
+
+Credit:NewLabel("UI by xHeptc u fucktards")
+Credit:NewLabel("Button script by Arty")
+Credit:NewLabel("Label script by Arty")
+Credit:NewLabel("Scripts by Unknow")
 
 -- Hotel Elephant
 
