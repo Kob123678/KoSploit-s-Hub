@@ -65,6 +65,11 @@ Admin:NewButton("Reviz Admin", "Click to execute", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/Caniwq2N"))()
 end)
 
+-- Credit
+
+local Tab = Window:NewTab("Credit")
+local Credit = Tab:NewSection("Made by arty")
+
 -- Hotel Elephant
 
 local Tab = Window:NewTab("Hotel Elephant")
