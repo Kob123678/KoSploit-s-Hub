@@ -15,10 +15,18 @@ end)
 
 -- Rejoin server
 
-local rejoin = Tab:NewSection("Rejoin server (Click to rejoin)")
+local rejoin = Tab:NewSection("Server")
 
 rejoin:NewButton("rejoin", "Click to rejoin", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/6wdd37J7"))()
+end)
+
+rejoin:NewButton("Server Hop", "Click to hop sercer", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/fuRgG35y"))()
+end)
+
+rejoin:NewButton("Server Hop (Join Lowest Player Server)", "Click to hop sercer", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/ZRpw2BDy"))()
 end)
 
 -- Dex explorer
