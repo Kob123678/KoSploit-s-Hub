@@ -21,11 +21,11 @@ rejoin:NewButton("rejoin", "Click to rejoin", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/6wdd37J7"))()
 end)
 
-rejoin:NewButton("Server Hop", "Click to hop sercer", function()
+rejoin:NewButton("Server Hop", "Click to hop server", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/fuRgG35y"))()
 end)
 
-rejoin:NewButton("Server Hop (Join Lowest Player Server)", "Click to hop sercer", function()
+rejoin:NewButton("Server Hop (Join Lowest Player Server)", "Click to hop server", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/ZRpw2BDy"))()
 end)
 
