@@ -102,6 +102,10 @@ AutoPlay:NewButton("Auto play", "Click to execute", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/main.lua",true))()
 end)
 
+AutoPlay:NewButton("Points Farm And More", "Click to execute", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoinkyPoinkie/FunkyFridayDevTools/main/Un-Obfuscated",true))()
+end)
+
 -- Blox Fruit
 
 local Tab = Window:NewTab("Blox Fruit")
