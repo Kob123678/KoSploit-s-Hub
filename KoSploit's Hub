@@ -144,22 +144,18 @@ EpicMinigames:NewButton("SCRIPT GUI #2", "Click to execute", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/YePwz5u5", true))()
 end)
 
--- Sharkbite
+-- Longest Answer Win
 
-local Tab = Window:NewTab("Sharkbite")
-local Sharkbite = Tab:NewSection("Sharkbite Gui (click to execute)")
+local Tab = Window:NewTab("Longest Answer Wins")
+local Longest = Tab:NewSection("Longest Answer Wins (click to execute)")
 
 
-Sharkbite:NewButton("Black Cypher Script", "Click to execute", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LOOF-sys/Roblox-Shit/main/SharkBite.lua"))()
+Longest:NewButton("Auto Answer (No Delay Answer)", "Click to execute", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/gKcpS75H", true))()
 end)
 
-Sharkbite:NewButton("The One In The Top-Right Corner", "Click to execute", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/YYVLbzVg", true))()
-end)
-
-Sharkbite:NewButton("Pepsi Byte", "Click to execute", function()
-    loadstring(rawget(game:GetObjects("rbxassetid://3623753581"), 1).Source)("Pepsi Byte")
+Longest:NewButton("Auto Answer (Have Delay)", "Click to execute", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/yhqHTFrJ", true))()
 end)
 
 -- Kohls Admin House
@@ -218,14 +214,4 @@ end)
 
 Pig:NewButton("Piggy Item Teleport", "Click to execute", function()
     loadstring(game:HttpGet('https://pastebin.com/raw/N4V9pZ1C'))()
-end)
-
--- Bedwars
-
-local Tab = Window:NewTab("Bedwars")
-local Bed = Tab:NewSection("Bedwars Gui (click to execute)")
-
-
-Bed:NewButton("Vape V4", "Click to execute", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
 end)
