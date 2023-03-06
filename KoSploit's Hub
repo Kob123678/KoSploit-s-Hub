@@ -13,7 +13,7 @@ Toggle:NewKeybind("Toggle UI", "Click to change keybinds", Enum.KeyCode.LeftAlt,
 	Library:ToggleUI()
 end)
 
--- Rejoin server
+-- Server
 
 local rejoin = Tab:NewSection("Server")
 
