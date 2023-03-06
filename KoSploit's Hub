@@ -17,7 +17,7 @@ end)
 
 local rejoin = Tab:NewSection("Server")
 
-rejoin:NewButton("rejoin", "Click to rejoin", function()
+rejoin:NewButton("Rejoin", "Click to rejoin", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/6wdd37J7"))()
 end)
 
