@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("KoSploit's Hub", "Sentinel")
+local Window = Library.CreateLib("KoSploit's Hub", "Ocean")
 
 -- MAIN MENU
 
@@ -9,7 +9,7 @@ local Tab = Window:NewTab("MAIN MENU")
 
 local Toggle = Tab:NewSection("Toggle UI")
 
-Toggle:NewKeybind("Toggle UI", "Click to change keybinds", Enum.KeyCode.RightShift, function()
+Toggle:NewKeybind("Toggle UI", "Click to change keybinds", Enum.KeyCode.LeftAlt, function()
 	Library:ToggleUI()
 end)
 
@@ -79,10 +79,8 @@ local Tab = Window:NewTab("Credit")
 local Credit = Tab:NewSection("Credits!!")
 
 
-Credit:NewLabel("UI by xHeptc u fucktards")
-Credit:NewLabel("Button script by Arty")
-Credit:NewLabel("Label script by Arty")
-Credit:NewLabel("Scripts by Unknow")
+Credit:NewLabel("UI Library: Kavo")
+Credit:NewLabel("Script By Kob")
 
 -- Hotel Elephant
 
@@ -146,7 +144,7 @@ end)
 
 -- Longest Answer Win
 
-local Tab = Window:NewTab("Longest Answer Wins")
+local Tab = Window:NewTab("LongestAnswerWins")
 local Longest = Tab:NewSection("Longest Answer Wins (click to execute)")
 
 
