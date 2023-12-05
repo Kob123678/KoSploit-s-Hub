@@ -210,8 +210,8 @@ local Tab = Window:NewTab("Piggy")
 local Pig = Tab:NewSection("Piggy Gui (click to execute)")
 
 
-Pig:NewButton("Vynixius Piggy GUI", "Click to execute", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Piggy/Piggy'))()
+Pig:NewButton("God Mode", "Click to execute", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/xRHcjXVs'))()
 end)
 
 Pig:NewButton("Piggy Item Teleport", "Click to execute", function()
