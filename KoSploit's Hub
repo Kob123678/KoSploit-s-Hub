@@ -1,219 +1,99 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("KoSploit's Hub (Discontinued)", "Ocean")
 
--- MAIN MENU
+-- Function to shorten button creation
+local function createButton(section, label, tooltip, script)
+    section:NewButton(label, tooltip, function()
+        loadstring(game:HttpGet(script))()
+    end)
+end
 
+-- Main Menu
 local Tab = Window:NewTab("MAIN MENU")
 
--- Toggle UI
-
 local Toggle = Tab:NewSection("Toggle UI")
+Toggle:NewKeybind("Toggle UI", "Click to change keybinds", Enum.KeyCode.LeftAlt, Library.ToggleUI)
 
-Toggle:NewKeybind("Toggle UI", "Click to change keybinds", Enum.KeyCode.LeftAlt, function()
-	Library:ToggleUI()
-end)
-
--- Server
-
-local rejoin = Tab:NewSection("Server")
-
-rejoin:NewButton("Rejoin", "Click to rejoin", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/6wdd37J7"))()
-end)
-
-rejoin:NewButton("Server Hop", "Click to hop server", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/fuRgG35y"))()
-end)
-
-rejoin:NewButton("Server Hop (Join Lowest Player Server)", "Click to hop server", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/ZRpw2BDy"))()
-end)
+local Server = Tab:NewSection("Server")
+createButton(Server, "Rejoin", "Click to rejoin", "https://pastebin.com/raw/6wdd37J7")
+createButton(Server, "Server Hop", "Click to hop server", "https://pastebin.com/raw/fuRgG35y")
+createButton(Server, "Server Hop (Join Lowest Player Server)", "Click to hop server", "https://pastebin.com/raw/ZRpw2BDy")
 
 -- Dex explorer
-
 local Dex = Tab:NewSection("Dex explorer (Click to execute)")
-
-Dex:NewButton("Dex explorer v2", "Click to execute", function()
-    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex Explorer V2.txt"))()
-end)
-
-Dex:NewButton("Dex explorer v4", "Click to execute", function()
-    loadstring(game:GetObjects("rbxassetid://418957341")[1].Source)()
-end)
+createButton(Dex, "Dex explorer v2", "Click to execute", "https://cdn.wearedevs.net/scripts/Dex Explorer V2.txt")
+createButton(Dex, "Dex explorer v4", "Click to execute", "rbxassetid://418957341")
 
 -- Anti Afk
-
 local Afk = Tab:NewSection("Anti Afk (Click to execute)")
-
-Afk:NewButton("Anti-Afk", "Click to execute", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/YaPHdZJ2"))()
-end)
+createButton(Afk, "Anti-Afk", "Click to execute", "https://pastebin.com/raw/YaPHdZJ2")
 
 -- BEST Admin Scripts
-
 local Admin = Tab:NewSection("BEST Admin Scripts (Click to execute)")
-
-Admin:NewButton("ShatterVast Admin", "Click to execute", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/iL4NRDux"))()
-end)
-
-Admin:NewButton("Infinite Yield", "Click to execute", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-end)
-
-Admin:NewButton("CMD - X", "Click to execute", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))()
-end)
-
-Admin:NewButton("Fates Admin", "Click to execute", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
-end)
-
-Admin:NewButton("Reviz Admin", "Click to execute", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/Caniwq2N"))()
-end)
+createButton(Admin, "ShatterVast Admin", "Click to execute", "https://pastebin.com/raw/iL4NRDux")
+createButton(Admin, "Infinite Yield", "Click to execute", "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
+createButton(Admin, "CMD - X", "Click to execute", "https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source")
+createButton(Admin, "Fates Admin", "Click to execute", "https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua")
+createButton(Admin, "Reviz Admin", "Click to execute", "https://pastebin.com/raw/Caniwq2N")
 
 -- Credit
-
-local Tab = Window:NewTab("Credit")
-local Credit = Tab:NewSection("Credits!!")
-
-
+local CreditTab = Window:NewTab("Credit")
+local Credit = CreditTab:NewSection("Credits!!")
 Credit:NewLabel("UI Library: Kavo")
 Credit:NewLabel("Script By Kob")
 
 -- Hotel Elephant
-
-local Tab = Window:NewTab("Hotel Elephant")
-local Hotel = Tab:NewSection("Ulimate money (Click to execute)")
-
-
-Hotel:NewButton("Get Ulimate money", "Click to execute", function()
-    game.ReplicatedStorage.MoneyRequest:FireServer(false, 2e9, "Cash")
-end)
+local HotelTab = Window:NewTab("Hotel Elephant")
+local Hotel = HotelTab:NewSection("Ultimate money (Click to execute)")
+createButton(Hotel, "Get Ultimate money", "Click to execute", "game.ReplicatedStorage.MoneyRequest:FireServer(false, 2e9, 'Cash')")
 
 -- Funky Friday
-
-local Tab = Window:NewTab("Funky Friday")
-local AutoPlay = Tab:NewSection("Auto play (Click to execute)")
-
-
-AutoPlay:NewButton("Auto play!", "Click to execute", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/main.lua",true))()
-end)
-
-AutoPlay:NewButton("Points Farm And More!", "Click to execute", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoinkyPoinkie/FunkyFridayDevTools/main/Un-Obfuscated",true))()
-end)
+local FunkyTab = Window:NewTab("Funky Friday")
+local Funky = FunkyTab:NewSection("Auto play (Click to execute)")
+createButton(Funky, "Auto play!", "Click to execute", "https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/main.lua")
+createButton(Funky, "Points Farm And More!", "Click to execute", "https://raw.githubusercontent.com/ZoinkyPoinkie/FunkyFridayDevTools/main/Un-Obfuscated")
 
 -- Blox Fruit
+local BloxTab = Window:NewTab("Blox Fruit")
+local BloxFruit = BloxTab:NewSection("Blox Fruit Gui (click to execute)")
+createButton(BloxFruit, "Rasputin Hub", "Click to execute", "https://rasputin-bf.glitch.me/bloxfruits.lua")
+createButton(BloxFruit, "Island Hub", "Click to execute", "https://raw.githubusercontent.com/vinhuchi/Island_Game/main/Beta-Testing.lua")
+createButton(BloxFruit, "JRL Hub", "Click to execute", "https://raw.githubusercontent.com/JRL-lav/Main/main/V2")
+createButton(BloxFruit, "Mokuro Hub", "Click to execute", "https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")
+createButton(BloxFruit, "Mose Hub", "Click to execute", "https://kyouko.se/09iiqyn6479k.txt")
+createButton(BloxFruit, "NOOB Hub", "Click to execute", "https://raw.githubusercontent.com/noobhub1/bloxfruit/main/script")
+createButton(BloxFruit, "SAZA Hub", "Click to execute", "https://pastebin.com/raw/2RB8izS4")
 
-local Tab = Window:NewTab("Blox Fruit")
-local BloxFruit = Tab:NewSection("Blox Fruit Gui (click to execute)")
-BloxFruit:NewButton("Rasputin Hub", "Click to execute", function()
-    loadstring(game:HttpGet("https://rasputin-bf.glitch.me/bloxfruits.lua"))()
-end)
-BloxFruit:NewButton("Island Hub", "Click to execute", function()
-     loadstring(game:HttpGet(('https://raw.githubusercontent.com/vinhuchi/Island_Game/main/Beta-Testing.lua'),true))()
-end)
-BloxFruit:NewButton("JRL Hub", "Click to execute", function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/JRL-lav/Main/main/V2"))()
-end)
-BloxFruit:NewButton("Mokuro Hub", "Click to execute", function()
-       loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
-end)
-BloxFruit:NewButton("Mose Hub", "Click to execute", function()
-      loadstring(game:HttpGet(('https://kyouko.se/09iiqyn6479k.txt'),true))()
-end)
-BloxFruit:NewButton("NOOB Hub", "Click to execute", function()
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/noobhub1/bloxfruit/main/script'))()
-end)
-BloxFruit:NewButton("SAZA Hub", "Click to execute", function()
-      loadstring(game:HttpGet('https://pastebin.com/raw/2RB8izS4'))()
-end)
+-- Epic Minigames
+local EpicTab = Window:NewTab("Epic minigames")
+local EpicMinigames = EpicTab:NewSection("Epic Minigames Gui (click to execute)")
+createButton(EpicMinigames, "MAIN SCRIPT / GUI", "Click to execute", "https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Epic%20Minigames/EpicMinigamesGUI")
+createButton(EpicMinigames, "SCRIPT GUI #2", "Click to execute", "https://pastebin.com/raw/YePwz5u5")
 
--- Epic mninigame
-
-local Tab = Window:NewTab("Epic minigames")
-local EpicMinigames = Tab:NewSection("Epic Minigames Gui (click to execute)")
-
-
-EpicMinigames:NewButton("MAIN SCRIPT / GUI", "Click to execute", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Epic%20Minigames/EpicMinigamesGUI"))()
-end)
-
-EpicMinigames:NewButton("SCRIPT GUI #2", "Click to execute", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/YePwz5u5", true))()
-end)
-
--- Longest Answer Win
-
-local Tab = Window:NewTab("LongestAnswerWins")
-local Longest = Tab:NewSection("Longest Answer Wins (click to execute)")
-
-
-Longest:NewButton("Auto Answer (No Delay Answer)", "Click to execute", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/gKcpS75H", true))()
-end)
-
-Longest:NewButton("Auto Answer (Have Delay)", "Click to execute", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/yhqHTFrJ", true))()
-end)
+-- Longest Answer Wins
+local LongestTab = Window:NewTab("LongestAnswerWins")
+local Longest = LongestTab:NewSection("Longest Answer Wins (click to execute)")
+createButton(Longest, "Auto Answer (No Delay Answer)", "Click to execute", "https://pastebin.com/raw/gKcpS75H")
+createButton(Longest, "Auto Answer (Have Delay)", "Click to execute", "https://pastebin.com/raw/yhqHTFrJ")
 
 -- Kohls Admin House
-
-local Tab = Window:NewTab("Kohls Admin House")
-local Khols = Tab:NewSection("Kohls Admin House Gui (click to execute)")
-
-
-Khols:NewButton("Admin Joy v2", "Click to execute", function()
-    loadstring(game:HttpGet("https://gist.githubusercontent.com/Kob123678/8b4bd26207025839e87ea928d451b5ea/raw/d7fe91cf4091580aefbf87884d133ed833245abc/Admin%2520Joy%2520v2"))()
-end)
-
-Khols:NewButton("NoobSploit v2", "Click to execute", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kob123678/NoobSploit-v2/main/NoobSploit%20v2", true))()
-end)
-
-Khols:NewButton("Shortcut V2!", "Click to execute", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kob123678/Shortcut-V2-/main/Shortcut%20v2", true))()
-end)
-
-Khols:NewButton("Shortcut", "Click to execute", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kob123678/Shortcut/main/Shortcut", true))()
-end)
+local KohlsTab = Window:NewTab("Kohls Admin House")
+local Khols = KohlsTab:NewSection("Kohls Admin House Gui (click to execute)")
+createButton(Khols, "Admin Joy v2", "Click to execute", "https://gist.githubusercontent.com/Kob123678/8b4bd26207025839e87ea928d451b5ea/raw/d7fe91cf4091580aefbf87884d133ed833245abc/Admin%2520Joy%2520v2")
+createButton(Khols, "NoobSploit v2", "Click to execute", "https://raw.githubusercontent.com/Kob123678/NoobSploit-v2/main/NoobSploit%20v2")
+createButton(Khols, "Shortcut V2!", "Click to execute", "https://raw.githubusercontent.com/Kob123678/Shortcut-V2-/main/Shortcut%20v2")
+createButton(Khols, "Shortcut", "Click to execute", "https://raw.githubusercontent.com/Kob123678/Shortcut/main/Shortcut")
 
 -- King legacy
-
-local Tab = Window:NewTab("King legacy")
-local King = Tab:NewSection("King legacy Gui (click to execute)")
-
-
-King:NewButton("Makuro Hub", "Click to execute", function()
-    loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
-end)
-
-King:NewButton("Black Script", "Click to execute", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/sannin9000/scripts/main/kinglegacy.lua"))()
-end)
-
-King:NewButton("River Hub", "Click to execute", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/7DDhAXjb"))()
-end)
-
-King:NewButton("Scarface", "Click to execute", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/PainfulDestroyer/Roblox/main/King%20Legacy"))()
-end)
+local KingTab = Window:NewTab("King legacy")
+local King = KingTab:NewSection("King legacy Gui (click to execute)")
+createButton(King, "Makuro Hub", "Click to execute", "https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")
+createButton(King, "Black Script", "Click to execute", "https://raw.githubusercontent.com/sannin9000/scripts/main/kinglegacy.lua")
+createButton(King, "River Hub", "Click to execute", "https://pastebin.com/raw/7DDhAXjb")
+createButton(King, "Scarface", "Click to execute", "https://raw.githubusercontent.com/PainfulDestroyer/Roblox/main/King%20Legacy")
 
 -- Piggy
-
-local Tab = Window:NewTab("Piggy")
-local Pig = Tab:NewSection("Piggy Gui (click to execute)")
-
-
-Pig:NewButton("God Mode", "Click to execute", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/xRHcjXVs'))()
-end)
-
-Pig:NewButton("Piggy Item Teleport", "Click to execute", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/N4V9pZ1C'))()
-end)
+local PiggyTab = Window:NewTab("Piggy")
+local Pig = PiggyTab:NewSection("Piggy Gui (click to execute)")
+createButton(Pig, "God Mode", "Click to execute", "https://pastebin.com/raw/xRHcjXVs")
+createButton(Pig, "Piggy Item Teleport", "Click to execute", "https://pastebin.com/raw/N4V9pZ1C")
